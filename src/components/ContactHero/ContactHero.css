@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Lora:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&family=Satisfy&display=swap');
+
+.service-btns{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.cta-title{
+    text-align: left;
+    font-family: "Satisfy", cursive;
+    margin-bottom: -30px;
+}
+
+.cta-line{
+    font-family: "Open Sans", sans-serif;
+}
+
+.cta-content{
+    text-align: center;
+    height:100px;
+    margin-top: 100px;
+    overflow:hidden ;
+}
+.service button{
+    border: 1px solid #c2fbd7;
+    background-color: white;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .service button:hover {
+    background-color: #a5f8c2;
+    color: #14694f;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px, rgba(44, 187, 99, .35) 0 0 0 2px;
+  }
+  
+  .service button:active {
+    background-color: #82e8b3;
+    color: #0d4f38;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px, rgba(44, 187, 99, .35) 0 0 0 2px;
+  }
+  
+  .cta-line {
+    font-size: 20px;
+    font-weight: bold;
+    color: white; 
+    text-align: center;
+    margin: 20px auto; 
+    transition: all 0.3s ease; 
+  }
+
+  .cta-title{
+    font-size: 18px;
+  font-weight: bold;
+  }
+  
+  
+
+  @media (max-width:576px)  {
+    .service-btns{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .service{
+      margin-bottom: -80px;
+    }
+  }

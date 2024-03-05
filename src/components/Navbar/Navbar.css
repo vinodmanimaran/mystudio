@@ -1,0 +1,165 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 10px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a better look */
+  z-index: 1000; /* Ensure the navbar is above other content */
+  transform: translateX(-10px);
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin: 0 10px;
+  padding: 10px;
+
+
+}
+
+
+.navbar a .nav-icon {
+  display: inline;
+}
+
+.navbar a .nav-name {
+  display: none;
+}
+
+.navbar a:hover .nav-icon {
+  display: none;
+}
+
+.navbar a:hover .nav-name {
+  display: inline;
+
+}
+
+
+.navbar a {
+    color: white; 
+    text-decoration: none;
+    margin: 0 1rem; 
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #666; 
+}
+
+
+.navbar ul li span:first-child {
+  display: none;
+}
+
+.navbar ul li:hover span:first-child {
+  display: inline-block;
+}
+
+.navbar ul li span:last-child {
+  display: inline-block;
+}
+
+.navbar ul li:hover span:last-child {
+  display: none;
+}
+
+
+.navbar ul li .nav-item-wrapper span {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.navbar ul li .nav-item-wrapper span.hidden {
+  opacity: 0;
+}
+
+.menu-icon{
+ margin: 1rem;
+}
+
+
+
+.close{
+ margin-left: 110px;
+ margin-top: -5px;
+}
+
+
+.open{
+  margin: 1rem;
+  z-index: 1000;
+}
+
+
+
+
+.back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  color: black;
+  backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+
+
+.sidebar-list {
+  list-style: none;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.text-placeholder {
+  border-radius: 5px;
+  width: 100px !important;
+  height: 20px;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  flex: 1;
+}
+
+
+.icon-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex: 40px 0;
+  margin-right: 20px;
+  border: 1px solid #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media (max-width:576px){
+  .navbar{
+    display: none;
+   
+  }
+
+
+}
