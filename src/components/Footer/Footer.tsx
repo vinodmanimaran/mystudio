@@ -8,7 +8,8 @@ const Footer = () => {
 <footer className="bg-gradient-to-r from-2312f0 to-gray-900 text-white py-8">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
         <div className="mb-4 md:mb-0">
-            <img src={logo} alt="logo" width={80}/>
+            {/* <img src={logo} alt="logo" width={80}/> */}
+            <p>logo</p>
         </div>
         <div className="flex space-x-4">
           <a

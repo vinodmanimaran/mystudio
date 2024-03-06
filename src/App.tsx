@@ -5,11 +5,14 @@ import Home from './pages/Home/Home'
 import Contact from './pages/Contact/Contact'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
+import ErrorBoundary from './pages/Error'
 
 
 const App = () => {
   return (
     <div className='container'>
+      <ErrorBoundary>
+
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -18,7 +21,9 @@ const App = () => {
       </Routes>
 
       <Footer/>
-    </div>
+
+      </ErrorBoundary>
+          </div>
   )
 }
 

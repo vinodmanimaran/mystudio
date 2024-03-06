@@ -18,10 +18,7 @@ type SidebarProps = {
   setIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-// Naive implementation - in reality would want to attach
-// a window or resize listener. Also use state/layoutEffect instead of ref/effect
-// if this is important to know on initial client render.
-// It would be safer to  return null for unmeasured states.
+
 export const useDimensions = (ref: React.RefObject<HTMLDivElement>) => {
   const dimensions = useRef({ width: 0, height: 0 });
 
@@ -200,14 +197,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleMenu, i,colors,setIsOpe
 const Navbar: React.FC = () => {
   const [showIcons, setShowIcons] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 990 ); // Set initial state based on screen width
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 400 ); // Set initial state based on screen width
   const [isopen, toggleopen] = useCycle(false, true);
   const containerRef = useRef<HTMLDivElement>(null);
   const { height } = useDimensions(containerRef);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 375);
+      setIsMobile(window.innerWidth <=700);
     };
 
     window.addEventListener('resize', handleResize);
