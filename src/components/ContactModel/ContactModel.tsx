@@ -1,23 +1,22 @@
 import React from 'react';
 import './ContactModel.css';
-import Lottie, { AnimationEventCallback, LottieRef } from 'react-lottie';
-import Animation from '../../assets/Animation - 1709637307866.json'; 
-
-const defaultOptions = {
-  loop: true,
-  autoplay: true,
-  animationData: Animation,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice"
-  }
-};
+import Lottie from 'react-lottie';
+import Animation from '../../assets/Animation - 1709637307866.json';
 
 const ContactModel: React.FC = () => {
-  const lottieRef = React.useRef<LottieRef>(null);
+  const handleComplete = (): void => {
+    console.log('Animation completed');
+  };
 
-  const completeListener: AnimationEventCallback = {
-    eventName: 'complete',
-    callback: () => {} // Empty callback to prevent complete event
+  
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: Animation,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
   };
 
   return (
@@ -25,8 +24,12 @@ const ContactModel: React.FC = () => {
       <Lottie 
         options={defaultOptions}
         isClickToPauseDisabled={true}
-        eventListeners={[completeListener]}
-        lottieRef={lottieRef}
+        eventListeners={[
+          {
+            eventName: 'complete',
+            callback: handleComplete
+          }
+        ]}
       />
     </div>
   );
