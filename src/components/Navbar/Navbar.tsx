@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 import {  AnimatePresence } from 'framer-motion';
 import { motion, sync, useCycle } from "framer-motion";
 
-// Define types for function parameters
 type SidebarProps = {
   isOpen: boolean;
   toggleMenu: () => void;
@@ -127,16 +126,13 @@ const variants = {
 const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleMenu, i,colors,setIsOpen }) => {
-  console.log("i value:", i); // Log the value of i to see if it's correct
   const colorIndex = i >= 0 && i < colors.length ? i : 0;
   
   const handleNavItemClick = () => {
-    // Close the sidebar when a navigation item is clicked
     setIsOpen(false);
   };
 
   const style = { border: `2px solid ${colors[colorIndex]}` };
-  console.log("style:", style);
 
   return (
     <AnimatePresence>
