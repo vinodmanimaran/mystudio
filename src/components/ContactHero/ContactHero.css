@@ -76,10 +76,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
+margin-top:2rem;
+/* margin-bottom: -70px; */
 
+    }
+
+
+  .cta-content{
+    margin-top: 5px;
     }
 
     .service{
       margin-bottom: -80px;
+      ;
     }
   }

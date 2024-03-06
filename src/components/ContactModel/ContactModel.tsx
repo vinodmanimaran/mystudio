@@ -1,36 +1,35 @@
-import React from 'react'
-import './ContactModel.css'
-import Lottie from 'react-lottie';
-import Animation from '/public/Animation - 1709637307866.json'
+import React from 'react';
+import './ContactModel.css';
+import Lottie, { LottieOptions, EventListener, LottieRef } from 'react-lottie';
+import Animation from '/public/Animation - 1709637307866.json';
 
-
-const defaultOptions = {
+const defaultOptions: LottieOptions = {
   loop: true,
   autoplay: true,
   animationData: Animation,
   rendererSettings: {
     preserveAspectRatio: "xMidYMid slice"
   }
-
 }
 
-const ContactModel = () => {
+const ContactModel: React.FC = () => {
+  const lottieRef = React.useRef<LottieRef>(null);
+
+  const clickListener: EventListener = {
+    eventName: 'click',
+    callback: () => {} 
+  };
+
   return (
     <div className='lottie-container'>
-       <Lottie 
-	    options={defaultOptions}
-      isClickToPauseDisabled={true
-      }
-      eventListeners={[
-        {
-          eventName: 'click',
-          callback: () => {}, // Empty callback to prevent click
-        },
-
-      ]}
+      <Lottie 
+        options={defaultOptions}
+        isClickToPauseDisabled={true}
+        eventListeners={[clickListener]}
+        ref={lottieRef}
       />
     </div>
-  )
+  );
 }
 
-export default ContactModel
+export default ContactModel;

@@ -213,14 +213,14 @@ const Sidebar = ({ isOpen, toggleMenu, i,colors,setIsOpen }) => {
 const Navbar = () => {
   const [showIcons, setShowIcons] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 576); // Set initial state based on screen width
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 990 ); // Set initial state based on screen width
   const [isopen, toggleopen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 320);
+      setIsMobile(window.innerWidth <= 375);
     };
 
     window.addEventListener('resize', handleResize);

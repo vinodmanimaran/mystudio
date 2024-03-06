@@ -1,12 +1,9 @@
-import React from 'react'
-import Navbar from '../../components/Navbar/Navbar'
-import Example from '../sample/sample'
+import React from 'react';
 
-const Home = () => {
+const Home: React.FC<{}> = () => {
   return (
-    <div className='container'>
-    </div>
-  )
-}
+    <div>Home</div>
+  );
+};
 
-export default Home
+export default Home;

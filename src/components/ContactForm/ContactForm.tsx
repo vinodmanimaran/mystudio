@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
 import './ContactForm.css';
 
-const ContactForm = () => {
-  const [formData, setFormData] = useState({
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
+
+const ContactForm: React.FC = () => {
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     phone: '',
     message: ''
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -17,7 +24,7 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Here you can handle form submission, for example, sending data to the server
     console.log(formData);
@@ -37,7 +44,7 @@ const ContactForm = () => {
             <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder='Enter your Phone' />
           </div>
           <div className="form-input">
-            <input type="text" name="service" value={formData.name} onChange={handleChange} placeholder='Enter your Service' />
+            <input type="text" name="service" value={formData.service} onChange={handleChange} placeholder='Enter your Service' />
           </div>
           <div className="form-input">
             <textarea name="message" value={formData.message} onChange={handleChange} placeholder='Enter your Message'></textarea>
