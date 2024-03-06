@@ -1,4 +1,4 @@
-import React, { useState, useEffect ,useRef} from 'react';
+import React, { useState, useEffect ,useRef, Dispatch, SetStateAction } from 'react';
 import { TiHomeOutline } from 'react-icons/ti';
 import { FaRegUser, FaFolderOpen, FaBars, FaTimes } from 'react-icons/fa';
 import { IoCodeWorkingOutline } from 'react-icons/io5';
@@ -9,13 +9,20 @@ import { Link } from 'react-router-dom';
 import {  AnimatePresence } from 'framer-motion';
 import { motion, sync, useCycle } from "framer-motion";
 
-
+// Define types for function parameters
+type SidebarProps = {
+  isOpen: boolean;
+  toggleMenu: () => void;
+  i: number;
+  colors: string[];
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
+}
 
 // Naive implementation - in reality would want to attach
 // a window or resize listener. Also use state/layoutEffect instead of ref/effect
 // if this is important to know on initial client render.
 // It would be safer to  return null for unmeasured states.
-export const useDimensions = ref => {
+export const useDimensions = (ref: React.RefObject<HTMLDivElement>) => {
   const dimensions = useRef({ width: 0, height: 0 });
 
   useEffect(() => {
@@ -27,8 +34,6 @@ export const useDimensions = ref => {
 
   return dimensions.current;
 };
-
-
 
 const navigation = [
   {
@@ -63,8 +68,6 @@ const navigation = [
   },
 ];
 
-
-
 const mbnavigation = [
   {
     navIcon: <TiHomeOutline size={20}  color='white' />,
@@ -98,7 +101,6 @@ const mbnavigation = [
   },
 ];
 
-
 const ulvariants = {
   open: {
     transition: { staggerChildren: 0.07, delayChildren: 0.2 }
@@ -107,7 +109,6 @@ const ulvariants = {
     transition: { staggerChildren: 0.05, staggerDirection: -1 }
   }
 };
-
 
 const variants = {
   open: {
@@ -126,21 +127,16 @@ const variants = {
   }
 };
 
-
 const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
 
-const Sidebar = ({ isOpen, toggleMenu, i,colors,setIsOpen }) => {
-
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleMenu, i,colors,setIsOpen }) => {
   console.log("i value:", i); // Log the value of i to see if it's correct
   const colorIndex = i >= 0 && i < colors.length ? i : 0;
-
   
   const handleNavItemClick = () => {
     // Close the sidebar when a navigation item is clicked
     setIsOpen(false);
   };
-
-
 
   const style = { border: `2px solid ${colors[colorIndex]}` };
   console.log("style:", style);
@@ -148,7 +144,6 @@ const Sidebar = ({ isOpen, toggleMenu, i,colors,setIsOpen }) => {
   return (
     <AnimatePresence>
       {isOpen && (
-
         <motion.div
           initial="closed"
           animate="open"
@@ -175,27 +170,23 @@ const Sidebar = ({ isOpen, toggleMenu, i,colors,setIsOpen }) => {
           className='back'
         >
           <div className="p-6">
-
-          <button className="close" onClick={toggleMenu}>
-          <FaTimes size={30} color='white' className='close '/> 
-          </button>
-
+            <button className="close" onClick={toggleMenu}>
+              <FaTimes size={30} color='white' className='close '/> 
+            </button>
             <motion.ul className="mt-4" variants={ulvariants}>
               {mbnavigation.map((navItem, index) => (
                 <motion.li key={index}
                 variants={variants}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }} className='sidebar-list'>
-            
                   <div className="icon-placeholder">
                     {navItem.navIcon}
                   </div>
                   <Link to={navItem.navLink}>
-                  <div className="text-placeholder"  onClick={handleNavItemClick}>
-                    {navItem.navName}
-                  </div>
+                    <div className="text-placeholder"  onClick={handleNavItemClick}>
+                      {navItem.navName}
+                    </div>
                   </Link>
-                  
                 </motion.li>
               ))}
             </motion.ul>
@@ -206,16 +197,12 @@ const Sidebar = ({ isOpen, toggleMenu, i,colors,setIsOpen }) => {
   );
 };
 
-
-
-
-
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [showIcons, setShowIcons] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 990 ); // Set initial state based on screen width
   const [isopen, toggleopen] = useCycle(false, true);
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const { height } = useDimensions(containerRef);
 
   useEffect(() => {
@@ -246,17 +233,14 @@ const Navbar = () => {
     console.log(isOpen)
   };
 
-
   return (
     <>
- {isMobile && (
-  <button onClick={openMenu1} className='open'>
-    <FaBars size={30} />
-  </button>
-)}
-
+      {isMobile && (
+        <button onClick={openMenu1} className='open'>
+          <FaBars size={30} />
+        </button>
+      )}
       <nav className="navbar">
-        
         <ul>
           {navigation.map((navItem, index) => (
             <li key={index}>
@@ -268,8 +252,7 @@ const Navbar = () => {
           ))}
         </ul>
       </nav>
-      {isMobile && <Sidebar isOpen={isOpen} toggleMenu={toggleMenu} i={colors} colors={colors} setIsOpen={setIsOpen}/>}
-     
+      {isMobile && <Sidebar isOpen={isOpen} toggleMenu={toggleMenu} i={colors.length} colors={colors} setIsOpen={setIsOpen}/>}
     </>
   );
 };

@@ -4,14 +4,17 @@ import './ContactForm.css';
 interface FormData {
   name: string;
   email: string;
+  service:string;
   phone: string;
   message: string;
+
 }
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
+    service:'',
     phone: '',
     message: ''
   });

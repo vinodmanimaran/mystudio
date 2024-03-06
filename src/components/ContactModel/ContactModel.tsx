@@ -1,20 +1,19 @@
 import React from 'react';
 import './ContactModel.css';
-import Lottie, { LottieProps, LottieRefOptions, AnimationEventCallback } from 'react-lottie';
-import Animation from '/public/Animation - 1709637307866.json';
+import Lottie, { AnimationEventCallback, LottieRef } from 'react-lottie';
+import Animation from '../../assets/Animation - 1709637307866.json'; 
 
-
-const defaultOptions: LottieProps['options'] = {
+const defaultOptions = {
   loop: true,
   autoplay: true,
-  animationData: Animation as any, // Cast animation data to any
+  animationData: Animation,
   rendererSettings: {
     preserveAspectRatio: "xMidYMid slice"
   }
-}
+};
 
 const ContactModel: React.FC = () => {
-  const lottieRef = React.useRef<LottieRefOptions>(null);
+  const lottieRef = React.useRef<LottieRef>(null);
 
   const completeListener: AnimationEventCallback = {
     eventName: 'complete',
@@ -31,6 +30,6 @@ const ContactModel: React.FC = () => {
       />
     </div>
   );
-}
+};
 
 export default ContactModel;
