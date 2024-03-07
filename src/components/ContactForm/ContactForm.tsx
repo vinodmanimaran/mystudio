@@ -29,11 +29,12 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Here you can handle form submission, for example, sending data to the server
     console.log(formData);
   };
 
   return (
+
+    <>
     <div className="glassmorphic-container">
       <div className="glassmorphic-card">
         <form onSubmit={handleSubmit}>
@@ -47,7 +48,7 @@ const ContactForm: React.FC = () => {
             <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder='Enter your Phone' />
           </div>
           <div className="form-input">
-            <input type="text" name="service" value={formData.service} onChange={handleChange} placeholder='Enter your Service' />
+            <input type="text" name="service" value={formData.service} onChange={handleChange} placeholder='Type of service' />
           </div>
           <div className="form-input">
             <textarea name="message" value={formData.message} onChange={handleChange} placeholder='Enter your Message'></textarea>
@@ -58,6 +59,8 @@ const ContactForm: React.FC = () => {
         </form>
       </div>
     </div>
+    </>
+    
   );
 };
 

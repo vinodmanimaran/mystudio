@@ -20,7 +20,7 @@ const ContactModel: React.FC = () => {
   };
 
   return (
-    <div className='lottie-container'>
+    <div className='lottie-container max-w-lg my-[-30px]  mx-7 '>
       <Lottie 
         options={defaultOptions}
         isClickToPauseDisabled={true}

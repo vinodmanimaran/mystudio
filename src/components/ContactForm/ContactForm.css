@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1)), url('../../assets/react.svg'); */
     background-size: cover;
   }
   
@@ -23,8 +22,8 @@
   
   input[type='text'],
   input[type='email'],
-  input[type='tel'],
-  textarea {
+  input[type='tel']
+ {
     width: 100%;
     padding: 15px;
     border: none;
@@ -33,6 +32,19 @@
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
   }
+
+
+
+  .form-input textarea{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+  }
+
   
   
   .form-input button {
@@ -140,5 +152,14 @@
 
 
   @media (max-width:576px) {
-   
+   .glassmorphic-container{
+/* overflow: hidden; */
+height: 85vh;
+/* margin: 1rem; */
+margin-bottom: 100px;
+   }
+
+   .glassmorphic-card{
+    margin-top: -100px ;
+   }
   }

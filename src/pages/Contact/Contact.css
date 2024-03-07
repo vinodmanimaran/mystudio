@@ -6,3 +6,36 @@
 }
 
 
+.myinfo-card{
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+
+.cta-content{
+    margin-top: 200px;
+}
+
+.company-name{
+    text-align: center;
+    margin-left: 90px;
+}
+@media (max-width:576px){
+    .typing{
+        height: 20rem !important;
+    }
+
+    .cta-content{
+        margin-top: 100px;
+        text-align: center;
+    }
+
+
+    .myinfo-card{
+        margin: 1rem;
+        transform: translateX(20px);
+        margin-bottom: 50px;
+    }
+}
+
+
