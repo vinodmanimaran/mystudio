@@ -76,6 +76,7 @@ justify-content: center;
 flex-wrap: wrap;
 margin-top:3rem;
 padding:5%;
+margin-bottom: -15rem;
 }
 
     .herocontact{
@@ -96,6 +97,7 @@ padding:5%;
     margin-bottom: 2px;
     }
 
+    
     .service{
       margin-bottom: -50px;
       margin-top: -40px;
