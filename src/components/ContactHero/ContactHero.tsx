@@ -18,7 +18,10 @@ const ContactHero: React.FC = () => {
   return (
     <div className='container herocontact  my-[-200px]'>
       <div className="cta-content_hero">
-      <p className='cta-line'>Have a project in mind? Let's bring your ideas to life. Share your vision with us by filling out the details below.</p>
+      <p className='cta-line'>
+  Let's collaborate and create something extraordinary together. Our team is eager to bring your vision to life.
+</p>
+
         <p className='cta-title'>I am interested in:</p>
       </div>
       <div className="service-btns">
