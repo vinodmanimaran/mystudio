@@ -19,15 +19,17 @@
 @media (max-width:576px){
     .typing{
         height: 20rem !important;
+        padding: 10%;
     }
 
     .cta-content{
         margin-top: 260px;
         text-align: center;
-        padding: 10%;
+        padding: 5%;
         margin-bottom: 3%;
     }
 
+    
     .myinfo-card{
         padding: 5%;
     }

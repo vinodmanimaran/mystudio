@@ -16,7 +16,7 @@ export function ContactUsHeader() {
       text: "with",
     },
     {
-      text: "StudioV.",
+      text: "StudioV",
       className: "text-blue-500 dark:text-blue-500",
     },
   ];
@@ -27,14 +27,14 @@ export function ContactUsHeader() {
         Let's build something great together.
       </p>
       <TypewriterEffectSmooth words={words} />
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+      <div className="flex flex-col  space-y-4 md:space-y-0 space-x-0 md:space-x-4 header-cta">
         <Link to="/contactus">
           <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
             Get in Touch
           </button>
         </Link>
         <Link to="/services">
-          <button className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
+          <button className="w-40 h-10 rounded-xl bg-white text-black border border-black cta-service_btn text-sm">
             Explore Services
           </button>
         </Link>
