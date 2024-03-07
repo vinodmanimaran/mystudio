@@ -4,7 +4,7 @@ interface PricingProps {
   // Define props here
 }
 
-const Pricing: React.FC<PricingProps> = (props) => {
+const Pricing: React.FC<PricingProps> = () => {
   return (
     <div>
     </div>
