@@ -19,7 +19,7 @@ const ContactHero: React.FC = () => {
     <div className='container herocontact  my-[-200px]'>
       <div className="cta-content_hero">
       <p className='cta-line'>
-  Let's collaborate and create something extraordinary together. Our team is eager to bring your vision to life.
+  Let's collaborate and create something extraordinary together.   
 </p>
 
         <p className='cta-title'>I am interested in:</p>
