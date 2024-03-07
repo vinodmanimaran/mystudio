@@ -3,12 +3,12 @@ import './ContactHero.css';
 
 const ContactHero: React.FC = () => {
   const services: string[] = [
-    "Website Development",
-    "iOS Development", 
-    "Android Development",
+    "Website",
+    "iOS", 
+    "Android",
     "UI/UX Design",
-    "SEO Optimization",
-    "E-commerce Solutions",
+    "SEO",
+    "E-commerce",
   ];
 
   const handleButtonClick = () => {
@@ -27,7 +27,7 @@ const ContactHero: React.FC = () => {
       <div className="service-btns">
         {services.map((service, index) => (
           <div className="service" key={index}>
-            <button onClick={handleButtonClick} className='my-5'>{service}</button>
+            <button onClick={handleButtonClick} className='my-5 whitespace-nowrap'>{service}</button>
           </div>
         ))}
       </div>

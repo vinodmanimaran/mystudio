@@ -68,15 +68,15 @@
   
 
   @media (max-width:576px)  {
-    .service-btns{
-        flex-direction: column;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-margin-top:4rem;
-
-    }
-
+.service-btns{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+margin-top:3rem;
+padding:5%;
+}
 
     .herocontact{
       margin-top: -30px !important;
@@ -97,7 +97,7 @@ margin-top:4rem;
     }
 
     .service{
-      margin-bottom: -80px;
-      ;
+      margin-bottom: -50px;
+      margin-top: -40px;
     }
   }
