@@ -5,6 +5,9 @@
     flex-direction: column;
 }
 
+.cursor_{
+    margin-left: -5px !important;
+}
 
 
 
@@ -14,9 +17,13 @@
     text-align: center;
 }
 
-.company-name{
-}
+
 @media (max-width:576px){
+
+    .cursor_{
+        margin-top: 6px;
+        margin-left:-3px !important;
+    }
     .typing{
         height: 20rem !important;
         padding: 10%;
