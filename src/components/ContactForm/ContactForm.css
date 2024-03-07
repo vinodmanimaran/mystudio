@@ -153,13 +153,13 @@
 
   @media (max-width:576px) {
    .glassmorphic-container{
-/* overflow: hidden; */
 height: 85vh;
-/* margin: 1rem; */
 margin-bottom: 100px;
+padding: 5%;
    }
 
    .glassmorphic-card{
     margin-top: -100px ;
+    padding: 10px;
    }
   }
