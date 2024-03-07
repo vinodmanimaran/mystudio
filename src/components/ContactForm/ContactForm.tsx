@@ -54,7 +54,7 @@ const ContactForm: React.FC = () => {
             <textarea name="message" value={formData.message} onChange={handleChange} placeholder='Enter your Message'></textarea>
           </div>
           <div className="form-input">
-            <button type="submit">Submit</button>
+            <button type="submit" className='submit-form'>Submit</button>
           </div>
         </form>
       </div>
