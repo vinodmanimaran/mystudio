@@ -6,10 +6,7 @@
 }
 
 
-.myinfo-card{
-    margin-top: 30px;
-    margin-left: 200px;
-}
+
 
 
 .cta-content{
@@ -18,8 +15,6 @@
 }
 
 .company-name{
-    text-align: center;
-    margin-left: 90px;
 }
 @media (max-width:576px){
     .typing{
@@ -31,11 +26,24 @@
         text-align: center;
     }
 
-
     .myinfo-card{
-        margin: 1rem;
-        transform: translateX(20px);
-        margin-bottom: 50px;
+        padding: 10%;
+    }
+
+    .company-name{
+        transform: translateX(100%);
+    }
+
+    .detailcard{
+    }
+
+    
+}
+
+
+@media(max-width:320px){
+    .company-name{
+        border: 1px solid red;
     }
 }
 
