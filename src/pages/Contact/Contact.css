@@ -24,6 +24,8 @@
     .cta-content{
         margin-top: 260px;
         text-align: center;
+        padding: 10%;
+        margin-bottom: 3%;
     }
 
     .myinfo-card{
@@ -34,17 +36,11 @@
         transform: translateX(100%);
     }
 
-    .detailcard{
-    }
-
+   
     
 }
 
 
-@media(max-width:320px){
-    .company-name{
-        border: 1px solid red;
-    }
-}
+
 
 
