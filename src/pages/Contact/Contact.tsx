@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
 
           <div className="row">
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-              <div className="cta-content">
+              <div className="cta-content ">
                 <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
                 <p className="text-lg text-gray-600 mb-4">Let's turn your ideas into reality. Fill out the form, and we'll get in touch with you shortly.</p>
                 <p className="text-lg text-gray-600 mb-4">Have questions or need assistance? Check out our <a href="/faq" className="text-blue-500">FAQs</a> for more information.</p>

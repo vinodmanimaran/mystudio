@@ -8,8 +8,8 @@
 
   @media (max-width:576px){
     .lottie-container{
-      transform: translateY(-220px);
-      margin-bottom: -210px !important;
+      transform: translateY(-140px);
+      margin-bottom: -160px !important;
       
     }
   }
