@@ -30,7 +30,6 @@ const Contact: React.FC = () => {
               <div className="cta-content ">
                 <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
                 <p className="text-lg text-gray-600 mb-4">Let's turn your ideas into reality. Fill out the form, and we'll get in touch with you shortly.</p>
-                <p className="text-lg text-gray-600 mb-4">Have questions or need assistance? Check out our <a href="/faq" className="text-blue-500">FAQs</a> for more information.</p>
                 <p className="text-lg text-gray-600">We're excited to work with you!</p>
               </div>
             </div>
